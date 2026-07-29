@@ -1,6 +1,7 @@
 ---
-import '../styles/global.css';
-import Navigation from '../components/Navigation.astro';
+import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 const pageTitle = "About Me";
 
 const identity = {
@@ -17,7 +18,6 @@ const finished = false;
 const goal = 3;
 
 const skillColor = "crimson";
-
 ---
 
 <html lang="en">
@@ -28,7 +28,7 @@ const skillColor = "crimson";
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>{pageTitle}</title>
-        <style define:vars={{skillColor}}>
+        <style define:vars={{ skillColor }}>
             h1 {
                 color: purple;
                 font-size: 4rem;
@@ -89,5 +89,7 @@ const skillColor = "crimson";
                 <p>My goal is not 3 days.</p>
             )
         }
+
+        <Footer />
     </body>
 </html>
